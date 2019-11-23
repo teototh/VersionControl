@@ -24,6 +24,7 @@ namespace UserMaintenance
             
             btnAdd.Text = Resource1.Add;
             btnSave.Text = Resource1.Save;
+            btnDelete.Text = Resource1.Delete;
 
             //listbox
             listUsers.DataSource = users;
@@ -63,6 +64,11 @@ namespace UserMaintenance
 
                 }
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            users.RemoveAt(listUsers.SelectedIndex);
         }
     }
 }

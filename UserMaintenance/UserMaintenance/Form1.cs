@@ -68,7 +68,16 @@ namespace UserMaintenance
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            users.RemoveAt(listUsers.SelectedIndex);
+            try
+            {
+                users.RemoveAt(listUsers.SelectedIndex);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("nincs törlendő elem a listában");
+            }
+            
         }
     }
 }
